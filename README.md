@@ -22,7 +22,7 @@ To get started with Scholaris locally:
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/scholaris.git
+git clone https://github.com/ahmadrafidev/scholaris.git
 cd scholaris
 ```
 
