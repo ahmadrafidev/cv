@@ -1,13 +1,13 @@
-import { about } from '@/data/about';
+import { getMdxContent } from '@/lib/mdx'
 
-export default function AboutPage() {
+export default async function AboutPage() {
+  const { content } = await getMdxContent('about')
+
   return (
-    <main className="max-w-2xl mx-auto px-4 py-16 space-y-4">
-      <h1 className="text-2xl font-semibold">About</h1>
-      <p>Name: {about.name}</p>
-      <p>Role: {about.role}</p>
-      <p>Location: {about.location}</p>
-      <p>Email: {about.email}</p>
+    <main className="max-w-2xl mx-auto px-4 py-16">
+      <article className="prose dark:prose-invert">
+        {content}
+      </article>
     </main>
-  );
+  )
 }

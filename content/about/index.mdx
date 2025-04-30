@@ -1,0 +1,42 @@
+---
+name: 'Dr. John Doe'
+role: 'Professor of Computer Science'
+bio: 'Researcher and educator specializing in artificial intelligence and its applications in education.'
+location: 'Stanford University'
+email: 'john.doe@stanford.edu'
+socials:
+  github: 'https://github.com/johndoe'
+  linkedin: 'https://linkedin.com/in/johndoe'
+  twitter: 'https://twitter.com/johndoe'
+---
+
+<Section>
+  # {frontmatter.name}
+  ### {frontmatter.role}
+
+  <Card
+    title="About Me"
+    description={frontmatter.bio}
+    className="mt-6"
+  />
+</Section>
+
+<Section>
+  ## Contact & Connect
+
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+    <Card
+      title="Contact Information"
+      description={`📍 ${frontmatter.location}\n📧 ${frontmatter.email}`}
+    />
+    
+    <Card
+      title="Social Media"
+      description={`
+GitHub: [@johndoe](${frontmatter.socials.github})
+LinkedIn: [Profile](${frontmatter.socials.linkedin})
+Twitter: [@johndoe](${frontmatter.socials.twitter})
+      `}
+    />
+  </div>
+</Section>
