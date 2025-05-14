@@ -151,7 +151,7 @@ export default async function HomePage() {
           </a>
           {' '}Feel free to{' '}
           <a 
-            href="https://github.com/ahmadrafidev/scholaris" 
+            href="https://github.com/ahmadrafidev/cv" 
             className="underline hover:text-black dark:hover:text-white transition-colors"
             target="_blank"
             rel="noopener noreferrer"

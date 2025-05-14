@@ -1,8 +1,8 @@
-# Scholaris
+# CV
 
 *A sleek academic resume template for researchers, scholars, and thinkers.*
 
-Scholaris is a minimalist, responsive personal website template built for academics, researchers, and graduate students. Showcase your publications, research interests, CV, and professional journey — all in one elegant place. Designed with clarity and simplicity in mind, Scholaris helps you present your scholarly work and personal story with confidence.
+CV is a minimalist, responsive personal website template built for academics, researchers, and graduate students. Showcase your publications, research interests, CV, and professional journey — all in one elegant place. Designed with clarity and simplicity in mind, CV helps you present your scholarly work and personal story with confidence.
 
 ---
 
@@ -19,13 +19,13 @@ Scholaris is a minimalist, responsive personal website template built for academ
 
 ## 📦 Getting Started (Local Development)
 
-To get started with Scholaris locally:
+To get started with CV locally:
 
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/ahmadrafidev/scholaris.git
-cd scholaris
+git clone https://github.com/ahmadrafidev/cv.git
+cd cv
 ```
 
 ### 2. Install Dependencies
@@ -40,7 +40,7 @@ pnpm install
 pnpm dev
 ```
 
-Visit [http://localhost:3000](http://localhost:3000) in your browser to view your Scholaris site.
+Visit [http://localhost:3000](http://localhost:3000) in your browser to view your CV site.
 
 ---
 

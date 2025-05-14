@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
-// Font optimization
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -21,8 +20,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Scholaris - Academic Portfolio Platform",
-    template: "%s | Scholaris"
+    default: "CV - Academic Portfolio Platform",
+    template: "%s | CV"
   },
   description: "A modern and sleek academic portfolio platform for researchers, scholars, and thinkers.",
   keywords: ["academic", "portfolio", "research", "scholar", "education", "university"],
@@ -30,10 +29,10 @@ export const metadata: Metadata = {
   creator: "Rafi",
   metadataBase: new URL("https://scholariss.vercel.app/"),
   openGraph: {
-    title: "Scholaris - Academic Portfolio Platform",
+    title: "CV - Academic Portfolio Platform",
     description: "A modern and sleek academic portfolio platform for researchers, scholars, and thinkers.",
     url: "https://scholariss.vercel.app/",
-    siteName: "Scholaris",
+    siteName: "CV",
     locale: "en_US",
     type: "website",
     images: [
@@ -41,13 +40,13 @@ export const metadata: Metadata = {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Scholaris - Academic Portfolio Platform"
+        alt: "CV - Professional Portfolio"
       }
     ]
   },
   twitter: {
     card: "summary_large_image",
-    title: "Scholaris - Academic Portfolio Platform",
+    title: "CV - Academic Portfolio Platform",
     description: "A modern and sleek academic portfolio platform for researchers, scholars, and thinkers.",
     images: ["/og-image.jpg"],
   },
