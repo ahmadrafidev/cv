@@ -6,6 +6,7 @@ export interface Profile {
     email: string;
     github: string;
     linkedin: string;
+    google_scholar: string;
   };
 }
 
