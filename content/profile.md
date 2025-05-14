@@ -7,4 +7,5 @@ contact:
   github: "ahmadrafidev"
   linkedin: "ahmadrafi"
   twitter: "ahmadrafi"
+  google_scholar: "your-scholar-id"
 --- 

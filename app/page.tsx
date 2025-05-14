@@ -50,6 +50,16 @@ export default async function HomePage() {
           >
             linkedin.com/in/{profile.contact.linkedin}
           </a>
+          <span aria-hidden="true">•</span>
+          <a 
+            href={`https://scholar.google.com/citations?user=${profile.contact.google_scholar}`} 
+            className="hover:text-black dark:hover:text-white transition-colors"
+            aria-label={`Google Scholar profile: ${profile.contact.google_scholar}`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Google Scholar
+          </a>
         </div>
       </section>
 
