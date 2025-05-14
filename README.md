@@ -8,9 +8,11 @@ Scholaris is a minimalist, responsive personal website template built for academ
 
 ## 🚀 Features
 
-- ✍️ Personal bio and CV sections
+- ✍️ Personal profile and experience sections
 - 📚 Publications list
 - 🧠 Research interests & projects
+- 🎓 Education history
+- 💼 Skills showcase
 - 🌐 Clean, responsive layout (mobile-ready)
 
 ---
@@ -30,20 +32,12 @@ cd scholaris
 
 ```bash
 pnpm install
-# or
-npm install
-# or
-yarn install
 ```
 
 ### 3. Run the Dev Server
 
 ```bash
 pnpm dev
-# or
-npm run dev
-# or
-yarn dev
 ```
 
 Visit [http://localhost:3000](http://localhost:3000) in your browser to view your Scholaris site.
@@ -53,30 +47,33 @@ Visit [http://localhost:3000](http://localhost:3000) in your browser to view you
 ## 🗂 Folder Structure
 
 ```txt
-app/
-├── page.tsx            # Main homepage
-├── about/               # About page
-├── research/            # Research interests or projects
-├── publications/        # List of papers or works
-├── cv/                  # Resume or CV
-components/              # Reusable UI components
-data/ 
-├── about.ts             # Personal info and bio
-├── research.ts          # Research interests or ongoing projects
-├── publications.ts      # List of academic works (papers, posters, etc.)
-├── cv.ts                # Education, work experience, skills
-public/                  # Static assets (images, CV PDF, etc)
+app/                    # Next.js app directory
+├── page.tsx           # Main homepage
+├── layout.tsx         # Root layout
+├── globals.css        # Global styles
+├── loading.tsx        # Loading state
+components/            # Reusable UI components
+content/              # Content files in Markdown
+├── profile.md        # Personal info and bio
+├── experience.md     # Work experience
+├── education.md      # Education history
+├── publications.md   # List of academic works
+├── research.md       # Research interests
+├── skills.md         # Skills and expertise
+public/               # Static assets (images, etc)
+lib/                  # Utility functions and helpers
+types/                # TypeScript type definitions
 ```
 
 ---
 
 ## ✏️ Customization
 
-- Update content view in `app/` pages.
-- Update data in `data/` folder.
-- Add or remove sections as needed.
-- Replace placeholders with your personal info and data.
-- Customize theme and styles using Tailwind CSS.
+- Update content in the `content/` directory using Markdown files
+- Modify components in the `components/` directory
+- Customize styles using Tailwind CSS in `app/globals.css`
+- Add or remove sections as needed
+- Replace placeholders with your personal info and data
 
 ---
 
