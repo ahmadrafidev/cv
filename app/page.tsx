@@ -1,5 +1,6 @@
 import { getAllContent } from '@/lib/content';
 import { ContentData, Education, Experience, Publication, ResearchInterest, Skill } from '@/types/content';
+import { Mail, Github, Linkedin, GraduationCap } from 'lucide-react';
 
 export default async function HomePage() {
   const content = getAllContent() as ContentData;
@@ -7,7 +8,7 @@ export default async function HomePage() {
 
   return (
     <main className="max-w-3xl mx-auto px-4 sm:px-6 py-6 sm:py-8">
-      {/* Header/Introduction */}
+      {/* Introduction */}
       <header className="mb-2 sm:mb-4 border-b pb-4 sm:pb-6">
         <h1 className="text-lg sm:text-2xl font-bold mb-2 sm:mb-3" tabIndex={0}>
           {profile.name}
@@ -22,43 +23,44 @@ export default async function HomePage() {
 
       {/* Contact Information */}
       <section className="mb-2 sm:mb-4" aria-label="Contact Information">
-        <div className="flex flex-wrap gap-2 sm:gap-3 text-xs sm:text-sm text-zinc-600 dark:text-zinc-400">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-6">
           <a 
             href={`mailto:${profile.contact.email}`} 
-            className="hover:text-black dark:hover:text-white transition-colors"
+            className="flex items-center space-x-2 text-xs sm:text-sm text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white transition-colors"
             aria-label={`Email: ${profile.contact.email}`}
           >
-            {profile.contact.email}
+            <Mail className="h-4 w-4 flex-shrink-0" />
+            <span className="truncate">{profile.contact.email}</span>
           </a>
-          <span aria-hidden="true">•</span>
           <a 
             href={`https://github.com/${profile.contact.github}`} 
-            className="hover:text-black dark:hover:text-white transition-colors"
+            className="flex items-center space-x-2 text-xs sm:text-sm text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white transition-colors"
             aria-label={`GitHub profile: ${profile.contact.github}`}
             target="_blank"
             rel="noopener noreferrer"
           >
-            github.com/{profile.contact.github}
+            <Github className="h-4 w-4 flex-shrink-0" />
+            <span className="truncate">@{profile.contact.github}</span>
           </a>
-          <span aria-hidden="true">•</span>
           <a 
             href={`https://linkedin.com/in/${profile.contact.linkedin}`} 
-            className="hover:text-black dark:hover:text-white transition-colors"
+            className="flex items-center space-x-2 text-xs sm:text-sm text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white transition-colors"
             aria-label={`LinkedIn profile: ${profile.contact.linkedin}`}
             target="_blank"
             rel="noopener noreferrer"
           >
-            linkedin.com/in/{profile.contact.linkedin}
+            <Linkedin className="h-4 w-4 flex-shrink-0" />
+            <span className="truncate">{profile.contact.linkedin}</span>
           </a>
-          <span aria-hidden="true">•</span>
           <a 
             href={`https://scholar.google.com/citations?user=${profile.contact.google_scholar}`} 
-            className="hover:text-black dark:hover:text-white transition-colors"
+            className="flex items-center space-x-2 text-xs sm:text-sm text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white transition-colors"
             aria-label={`Google Scholar profile: ${profile.contact.google_scholar}`}
             target="_blank"
             rel="noopener noreferrer"
           >
-            Google Scholar
+            <GraduationCap className="h-4 w-4 flex-shrink-0" />
+            <span className="truncate">Google Scholar</span>
           </a>
         </div>
       </section>
