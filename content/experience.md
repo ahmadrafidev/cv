@@ -2,6 +2,7 @@
 experience:
   - role: "Senior Software Engineer"
     company: "Company Name"
+    companyUrl: "www.example.com"
     period: "2022-Present"
     highlights:
       - "Led development of distributed systems processing millions of requests daily"

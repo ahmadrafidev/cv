@@ -19,6 +19,7 @@ export interface Education {
 export interface Experience {
   role: string;
   company: string;
+  companyUrl?: string;
   period: string;
   highlights: string[];
 }
