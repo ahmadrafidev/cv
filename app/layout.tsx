@@ -27,11 +27,11 @@ export const metadata: Metadata = {
   keywords: ["academic", "portfolio", "research", "scholar", "education", "university"],
   authors: [{ name: "Ahmad Rafi Wirana" }],
   creator: "Rafi",
-  metadataBase: new URL("https://scholariss.vercel.app/"),
+  metadataBase: new URL("https://scho.vercel.app/"),
   openGraph: {
     title: "CV - Academic Portfolio Platform",
     description: "A modern and sleek academic portfolio platform for researchers, scholars, and thinkers.",
-    url: "https://scholariss.vercel.app/",
+    url: "https://scho.vercel.app/",
     siteName: "CV",
     locale: "en_US",
     type: "website",
@@ -64,7 +64,7 @@ export const metadata: Metadata = {
   verification: {
     google: "verification_token",
     other: {
-      me: ["https://scholariss.vercel.app"],
+      me: ["https://scho.vercel.app"],
     },
   },
 };
