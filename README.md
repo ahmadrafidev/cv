@@ -52,7 +52,6 @@ app/                    # Next.js app directory
 ├── layout.tsx         # Root layout
 ├── globals.css        # Global styles
 ├── loading.tsx        # Loading state
-components/            # Reusable UI components
 content/              # Content files in Markdown
 ├── profile.md        # Personal info and bio
 ├── experience.md     # Work experience
@@ -70,7 +69,6 @@ types/                # TypeScript type definitions
 ## ✏️ Customization
 
 - Update content in the `content/` directory using Markdown files
-- Modify components in the `components/` directory
 - Customize styles using Tailwind CSS in `app/globals.css`
 - Add or remove sections as needed
 - Replace placeholders with your personal info and data
