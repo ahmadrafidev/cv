@@ -1,7 +1,7 @@
 import { Mail, Github, Linkedin, GraduationCap } from 'lucide-react';
 
 import { getAllContent } from '@/lib/content';
-import { ContentData, Education, Experience, Publication, ResearchInterest, Skill } from '@/types/content';
+import { ContentData, Education, Experience, Publication, Skill } from '@/types/content';
 
 export default async function HomePage() {
   const content = getAllContent() as ContentData;
