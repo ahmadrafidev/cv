@@ -132,11 +132,15 @@ export default async function HomePage() {
         {/* Research Interests */}
         <section aria-labelledby="research-heading">
           <h2 id="research-heading" className="text-lg md:text-xl font-semibold mb-4 text-zinc-900 dark:text-zinc-50">Research Interests</h2>
-          <div className="space-y-4">
-            {research.research_interests.map((interest: ResearchInterest, index: number) => (
-              <div key={index}>
-                <h3 className="font-medium text-base md:text-lg text-zinc-900 dark:text-zinc-50 mb-1">{interest.title}</h3>
-                <p className="text-xs md:text-sm text-zinc-600 dark:text-zinc-400">{interest.description}</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {research.research_interests.map((interest: string, index: number) => (
+              <div 
+                key={index} 
+                className="p-4 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-800/50 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors"
+              >
+                <p className="text-sm md:text-base text-zinc-700 dark:text-zinc-300">
+                  {interest}
+                </p>
               </div>
             ))}
           </div>

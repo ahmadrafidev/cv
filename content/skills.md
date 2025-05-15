@@ -15,11 +15,5 @@ skills:
       - "TensorFlow"
       - "Docker"
       - "Kubernetes"
-
-  - category: "Areas of Expertise"
-    items:
-      - "Machine Learning"
-      - "Distributed Systems"
-      - "Cloud Computing"
-      - "System Design"
+  
 --- 

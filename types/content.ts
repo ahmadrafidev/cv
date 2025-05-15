@@ -30,11 +30,6 @@ export interface Skill {
   items: string[];
 }
 
-export interface ResearchInterest {
-  title: string;
-  description: string;
-}
-
 export interface Publication {
   title: string;
   authors: string;
@@ -54,7 +49,7 @@ export interface ContentData {
     skills: Skill[];
   };
   research: {
-    research_interests: ResearchInterest[];
+    research_interests: string[];
   };
   publications: {
     publications: Publication[];

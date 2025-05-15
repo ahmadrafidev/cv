@@ -91,13 +91,10 @@ education:
 ---
 research_interests:
   - title: "Research Area Title"
-    description: "Detailed description of your research interest in this area."
 
   - title: "Another Research Focus"
-    description: "Description of another research area you're interested in."
 
   - title: "Additional Research Area"
-    description: "Description of your work or interest in this field."
 ---
 ```
 
@@ -119,12 +116,6 @@ skills:
       - "Tool 1"
       - "Platform 1"
 
-  - category: "Areas of Expertise"
-    items:
-      - "Expertise Area 1"
-      - "Expertise Area 2"
-      - "Expertise Area 3"
-      - "Expertise Area 4"
 ---
 ```
 
