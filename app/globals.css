@@ -132,23 +132,121 @@
 
 /* Print styles */
 @media print {
-  body {
-    @apply text-black bg-white;
-  }
-  
-  main {
-    @apply max-w-none mx-0 px-8;
-  }
-
-  a {
-    @apply text-black no-underline;
-  }
-
-  section {
-    @apply break-inside-avoid;
-  }
-
+  /* Hide elements not needed for printing */
+  header nav,
+  footer,
+  button,
   .no-print {
-    display: none;
+    display: none !important;
+  }
+
+  /* Reset page margins and ensure content fits on one page */
+  @page {
+    size: A4 portrait;
+    margin: 0;
+  }
+
+  html {
+    width: 210mm;
+    height: 297mm;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100%;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Main print container styling */
+  .print-container {
+    width: 100%;
+    padding: 12mm;
+    box-sizing: border-box;
+    position: relative;
+    transform: scale(0.95);
+    transform-origin: top left;
+  }
+
+  /* Typography adjustments */
+  * {
+    background-color: white !important;
+    color: black !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    filter: none !important;
+    -ms-filter: none !important;
+    font-size: 10pt;
+    line-height: 1.2;
+  }
+
+  /* Headings with smaller sizes */
+  h1 { font-size: 18pt !important; margin: 0.3em 0 !important; }
+  h2 { font-size: 14pt !important; margin: 0.3em 0 !important; }
+  h3 { font-size: 12pt !important; margin: 0.3em 0 !important; }
+  h4, h5, h6 { font-size: 11pt !important; margin: 0.3em 0 !important; }
+
+  /* Content spacing */
+  p, h1, h2, h3, h4, h5, h6, blockquote, ul, ol {
+    margin-top: 0.2em !important;
+    margin-bottom: 0.2em !important;
+    page-break-inside: avoid;
+  }
+
+  /* Compact lists */
+  ul, ol {
+    padding-left: 1.2em;
+    margin: 0.2em 0 !important;
+  }
+
+  li {
+    margin: 0.1em 0 !important;
+  }
+
+  /* Handle links */
+  a {
+    text-decoration: none;
+    color: inherit !important;
+  }
+
+  a[href]:after {
+    content: none !important;
+  }
+
+  /* Table adjustments */
+  table {
+    font-size: 9pt;
+    border-collapse: collapse;
+    width: 100%;
+    margin: 0.2em 0 !important;
+  }
+
+  table, th, td {
+    border: 0.5pt solid black !important;
+  }
+
+  th, td {
+    padding: 1mm;
+  }
+
+  /* Ensure all content is visible */
+  img {
+    max-width: 100% !important;
+    max-height: 120mm !important;
+    page-break-inside: avoid;
+    object-fit: contain;
+  }
+
+  /* Remove margins and padding */
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Add minimal spacing between elements */
+  * + * {
+    margin-top: 0.15em;
   }
 }
