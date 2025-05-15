@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import PrintHandler from "./components/PrintHandler";
+import { ThemeProvider } from "next-themes";
+import { ThemeToggle } from "./components/ThemeToggle";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -76,14 +78,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`scroll-smooth ${geistSans.variable} ${geistMono.variable}`}>
-      <body
-        className="font-sans bg-white text-black dark:bg-zinc-950 dark:text-zinc-100 antialiased"
-      >
-        <PrintHandler />
-        <div className="print-container">
-          {children}
-        </div>
+    <html lang="en" className={`scroll-smooth ${geistSans.variable} ${geistMono.variable}`} suppressHydrationWarning>
+      <body className="font-sans bg-white text-black dark:bg-zinc-950 dark:text-zinc-100 antialiased">
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <div className="fixed top-4 right-[calc(50%-32rem+1.5rem)] z-50">
+            <ThemeToggle />
+          </div>
+          <PrintHandler />
+          <div className="print-container">
+            {children}
+          </div>
+        </ThemeProvider>
       </body>
     </html>
   );

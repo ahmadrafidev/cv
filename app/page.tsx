@@ -8,7 +8,7 @@ export default async function HomePage() {
   const { profile, education, experience, skills, research, publications } = content;
 
   return (
-    <main className="max-w-4xl mx-auto px-6 py-8 print:py-4 min-h-screen bg-white dark:bg-zinc-900">
+    <main className="max-w-4xl mx-auto px-6 py-8 print:py-4 min-h-screen bg-white dark:bg-black">
       {/* Header */}
       <header className="border-b border-zinc-200 dark:border-zinc-800 pb-6 mb-8">
         <h1 className="text-2xl md:text-3xl font-bold tracking-tight mb-2" tabIndex={0}>
