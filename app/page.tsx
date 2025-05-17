@@ -370,7 +370,7 @@ export default async function HomePage() {
           >
             fork and customize
           </a>
-          {' '}this template for your own academic profile.
+          {' '}this template for your own profile.
         </p>
       </footer>
     </main>
