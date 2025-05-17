@@ -12,6 +12,8 @@ CV is a minimalist, responsive personal website template built for academics, re
 - 📚 Publications list
 - 🧠 Research interests & projects
 - 🎓 Education history
+- 👨‍🏫 Teaching experience
+- 🎤 Talks and presentations
 - 💼 Skills showcase
 - 🌐 Clean, responsive layout (mobile-ready)
 
@@ -52,12 +54,19 @@ app/                    # Next.js app directory
 ├── layout.tsx         # Root layout
 ├── globals.css        # Global styles
 ├── loading.tsx        # Loading state
+├── experience/        # Experience page
+├── education/         # Education page
+├── teaching/          # Teaching experience page
+├── talks/            # Talks and presentations page
+├── publications/      # Publications page
 content/              # Content files in Markdown
 ├── profile.md        # Personal info and bio
 ├── experience.md     # Work experience
 ├── education.md      # Education history
 ├── publications.md   # List of academic works
 ├── research.md       # Research interests
+├── teaching.md       # Teaching experience
+├── talks.md         # Talks and presentations
 ├── skills.md         # Skills and expertise
 public/               # Static assets (images, etc)
 lib/                  # Utility functions and helpers

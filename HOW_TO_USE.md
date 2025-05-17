@@ -12,6 +12,8 @@ All your CV content is stored in the `content` folder. You'll find several files
 4. `skills.md` - Your technical and soft skills
 5. `publications.md` - Your publications or written works
 6. `research.md` - Your research experience or projects
+7. `teaching.md` - Your teaching experience and courses
+8. `talks.md` - Your presentations and speaking engagements
 
 ## ✍️ How to Edit Files
 
@@ -134,6 +136,52 @@ publications:
     venue: "Another Conference or Journal, Year"
     link: "https://link-to-another-publication.com"
     abstract: "Brief description of this publication..."
+---
+```
+
+#### Teaching (`teaching.md`)
+```markdown
+---
+teaching:
+  - course: "Course Name"
+    institution: "University or Institution Name"
+    period: "2022-Present"
+    description: "Brief description of the course"
+    highlights:
+      - "Key teaching achievement or responsibility"
+      - "Another significant contribution"
+      - "One more highlight"
+
+  - course: "Previous Course"
+    institution: "Previous Institution"
+    period: "2020-2022"
+    description: "Description of the course"
+    highlights:
+      - "Key achievement from this course"
+      - "Another important accomplishment"
+      - "One more highlight"
+---
+```
+
+#### Talks (`talks.md`)
+```markdown
+---
+talks:
+  - title: "Talk or Presentation Title"
+    event: "Event or Conference Name"
+    date: "Month Year"
+    location: "Location (City, Country)"
+    description: "Brief description of your talk"
+    link: "https://link-to-talk.com"
+    slides: "https://link-to-slides.com"
+
+  - title: "Another Talk Title"
+    event: "Another Event"
+    date: "Month Year"
+    location: "Location (City, Country)"
+    description: "Description of this talk"
+    link: "https://link-to-another-talk.com"
+    slides: "https://link-to-another-slides.com"
 ---
 ```
 
