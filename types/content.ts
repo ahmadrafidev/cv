@@ -37,6 +37,22 @@ export interface Publication {
   link?: string;
 }
 
+export interface Talk {
+  title: string;
+  event: string;
+  date: string;
+  location: string;
+  description: string;
+}
+
+export interface Teaching {
+  title: string;
+  institution: string;
+  period: string;
+  role: string;
+  description: string;
+}
+
 export interface ContentData {
   profile: Profile;
   education: {
@@ -53,5 +69,15 @@ export interface ContentData {
   };
   publications: {
     publications: Publication[];
+  };
+  talks: {
+    conference_talks: Talk[];
+    workshop_presentations: Talk[];
+    panel_discussions: Talk[];
+  };
+  teaching: {
+    university_courses: Teaching[];
+    workshops_training: Teaching[];
+    mentoring: Teaching[];
   };
 } 

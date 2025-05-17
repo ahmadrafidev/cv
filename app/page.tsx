@@ -1,11 +1,11 @@
 import { Mail, Github, Linkedin, GraduationCap } from 'lucide-react';
 
 import { getAllContent } from '@/lib/content';
-import { ContentData, Education, Experience, Publication, Skill } from '@/types/content';
+import { ContentData, Education, Experience, Publication, Skill, Talk, Teaching } from '@/types/content';
 
 export default async function HomePage() {
   const content = getAllContent() as ContentData;
-  const { profile, education, experience, skills, research, publications } = content;
+  const { profile, education, experience, skills, research, publications, talks, teaching } = content;
 
   return (
     <main className="max-w-4xl mx-auto px-6 py-8 print:py-4 min-h-screen bg-white dark:bg-black">
@@ -155,6 +155,124 @@ export default async function HomePage() {
                 </p>
               </div>
             ))}
+          </div>
+        </section>
+
+        {/* Talks & Presentations */}
+        <section aria-labelledby="talks-heading">
+          <h2 id="talks-heading" className="text-lg md:text-xl font-semibold mb-4 text-zinc-900 dark:text-zinc-50">Talks & Presentations</h2>
+          
+          {/* Conference Talks */}
+          <div className="mb-6">
+            <h3 className="font-medium text-base md:text-lg text-zinc-900 dark:text-zinc-50 mb-3">Conference Talks</h3>
+            <div className="space-y-4">
+              {talks.conference_talks.map((talk: Talk, index: number) => (
+                <div key={index} className="group">
+                  <h4 className="font-medium text-base text-zinc-900 dark:text-zinc-50 mb-1">{talk.title}</h4>
+                  <div className="text-xs md:text-sm text-zinc-600 dark:text-zinc-400 space-y-1">
+                    <p><span className="font-medium">Event:</span> {talk.event}</p>
+                    <p><span className="font-medium">Date:</span> {talk.date}</p>
+                    <p><span className="font-medium">Location:</span> {talk.location}</p>
+                    <p className="mt-1">{talk.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Workshop Presentations */}
+          <div className="mb-6">
+            <h3 className="font-medium text-base md:text-lg text-zinc-900 dark:text-zinc-50 mb-3">Workshop Presentations</h3>
+            <div className="space-y-4">
+              {talks.workshop_presentations.map((talk: Talk, index: number) => (
+                <div key={index} className="group">
+                  <h4 className="font-medium text-base text-zinc-900 dark:text-zinc-50 mb-1">{talk.title}</h4>
+                  <div className="text-xs md:text-sm text-zinc-600 dark:text-zinc-400 space-y-1">
+                    <p><span className="font-medium">Event:</span> {talk.event}</p>
+                    <p><span className="font-medium">Date:</span> {talk.date}</p>
+                    <p><span className="font-medium">Location:</span> {talk.location}</p>
+                    <p className="mt-1">{talk.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Panel Discussions */}
+          <div>
+            <h3 className="font-medium text-base md:text-lg text-zinc-900 dark:text-zinc-50 mb-3">Panel Discussions</h3>
+            <div className="space-y-4">
+              {talks.panel_discussions.map((talk: Talk, index: number) => (
+                <div key={index} className="group">
+                  <h4 className="font-medium text-base text-zinc-900 dark:text-zinc-50 mb-1">{talk.title}</h4>
+                  <div className="text-xs md:text-sm text-zinc-600 dark:text-zinc-400 space-y-1">
+                    <p><span className="font-medium">Event:</span> {talk.event}</p>
+                    <p><span className="font-medium">Date:</span> {talk.date}</p>
+                    <p><span className="font-medium">Location:</span> {talk.location}</p>
+                    <p className="mt-1">{talk.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Teaching & Mentoring */}
+        <section aria-labelledby="teaching-heading">
+          <h2 id="teaching-heading" className="text-lg md:text-xl font-semibold mb-4 text-zinc-900 dark:text-zinc-50">Teaching & Mentoring</h2>
+          
+          {/* University Courses */}
+          <div className="mb-6">
+            <h3 className="font-medium text-base md:text-lg text-zinc-900 dark:text-zinc-50 mb-3">University Courses</h3>
+            <div className="space-y-4">
+              {teaching.university_courses.map((course: Teaching, index: number) => (
+                <div key={index} className="group">
+                  <h4 className="font-medium text-base text-zinc-900 dark:text-zinc-50 mb-1">{course.title}</h4>
+                  <div className="text-xs md:text-sm text-zinc-600 dark:text-zinc-400 space-y-1">
+                    <p><span className="font-medium">Institution:</span> {course.institution}</p>
+                    <p><span className="font-medium">Period:</span> {course.period}</p>
+                    <p><span className="font-medium">Role:</span> {course.role}</p>
+                    <p className="mt-1">{course.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Workshops & Training */}
+          <div className="mb-6">
+            <h3 className="font-medium text-base md:text-lg text-zinc-900 dark:text-zinc-50 mb-3">Workshops & Training</h3>
+            <div className="space-y-4">
+              {teaching.workshops_training.map((workshop: Teaching, index: number) => (
+                <div key={index} className="group">
+                  <h4 className="font-medium text-base text-zinc-900 dark:text-zinc-50 mb-1">{workshop.title}</h4>
+                  <div className="text-xs md:text-sm text-zinc-600 dark:text-zinc-400 space-y-1">
+                    <p><span className="font-medium">Organization:</span> {workshop.institution}</p>
+                    <p><span className="font-medium">Period:</span> {workshop.period}</p>
+                    <p><span className="font-medium">Role:</span> {workshop.role}</p>
+                    <p className="mt-1">{workshop.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Mentoring */}
+          <div>
+            <h3 className="font-medium text-base md:text-lg text-zinc-900 dark:text-zinc-50 mb-3">Mentoring</h3>
+            <div className="space-y-4">
+              {teaching.mentoring.map((mentorship: Teaching, index: number) => (
+                <div key={index} className="group">
+                  <h4 className="font-medium text-base text-zinc-900 dark:text-zinc-50 mb-1">{mentorship.title}</h4>
+                  <div className="text-xs md:text-sm text-zinc-600 dark:text-zinc-400 space-y-1">
+                    <p><span className="font-medium">Organization:</span> {mentorship.institution}</p>
+                    <p><span className="font-medium">Period:</span> {mentorship.period}</p>
+                    <p><span className="font-medium">Role:</span> {mentorship.role}</p>
+                    <p className="mt-1">{mentorship.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </section>
       </div>

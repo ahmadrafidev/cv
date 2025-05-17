@@ -19,5 +19,7 @@ export function getAllContent() {
     skills: getContent('skills.md'),
     research: getContent('research.md'),
     publications: getContent('publications.md'),
+    talks: getContent('talks.md'),
+    teaching: getContent('teaching.md'),
   };
 } 
