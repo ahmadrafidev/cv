@@ -15,6 +15,7 @@ conference_talks:
     date: November 2023
     location: Virtual
     description: Discussed emerging trends in frontend development, including React Server Components and the impact of AI on web development.
+
 workshop_presentations:
   - title: Hands-on TypeScript Workshop
     event: Developer Meetup
@@ -23,6 +24,7 @@ workshop_presentations:
     date: September 2023
     location: Local Tech Hub
     description: Conducted a practical workshop on TypeScript best practices and advanced type system features.
+    
 panel_discussions:
   - title: The Evolution of Web Development
     event: Web Standards Conference

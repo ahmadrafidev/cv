@@ -1,5 +1,6 @@
 ---
 title: Teaching & Mentoring
+
 university_courses:
   - title: Advanced Web Development
     institution: University of Technology
@@ -15,6 +16,7 @@ university_courses:
     period: Spring 2023
     role: Guest Lecturer
     description: Taught fundamental programming concepts to beginners, focusing on JavaScript and basic web development principles.
+
 workshops_training:
   - title: React Development Bootcamp
     institution: Tech Education Center
@@ -30,6 +32,7 @@ workshops_training:
     period: Winter 2023
     role: Workshop Facilitator
     description: Led a series of workshops on TypeScript, covering type system, generics, and advanced type patterns.
+
 mentoring:
   - title: Code Mentorship Program
     institution: Tech Community

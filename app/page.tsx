@@ -42,11 +42,77 @@ export default async function HomePage() {
 
       {/* Main Content */}
       <div className="space-y-8">
+
+        {/* Education */}
+        <section aria-labelledby="education-heading">
+          <div className="flex justify-between items-center mb-4">
+            <h2 id="education-heading" className="text-lg md:text-xl font-semibold text-zinc-900 dark:text-zinc-50">Education</h2>
+            <a 
+              href="/education" 
+              className="text-sm text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 flex items-center gap-1"
+            >
+              View all
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-arrow-right">
+                <path d="M5 12h14"/>
+                <path d="m12 5 7 7-7 7"/>
+              </svg>
+            </a>
+          </div>
+          <div className="space-y-4">
+            {education.education.slice(0, 3).map((edu: Education, index: number) => (
+              <div key={index}>
+                <div className="flex flex-wrap justify-between items-baseline mb-1">
+                  <h3 className="font-medium text-base md:text-lg text-zinc-900 dark:text-zinc-50">{edu.degree}</h3>
+                  <span className="text-xs md:text-sm text-zinc-600 dark:text-zinc-400">{edu.year}</span>
+                </div>
+                <p className="text-sm md:text-base text-zinc-700 dark:text-zinc-300">
+                  {edu.schoolUrl ? (
+                    <a href={edu.schoolUrl} className="hover:text-zinc-900 dark:hover:text-zinc-50" target="_blank" rel="noopener noreferrer">
+                      {edu.school}
+                    </a>
+                  ) : (
+                    edu.school
+                  )}
+                </p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Research Interests */}
+        <section aria-labelledby="research-heading">
+          <h2 id="research-heading" className="text-lg md:text-xl font-semibold mb-4 text-zinc-900 dark:text-zinc-50">Research Interests</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {research.research_interests.map((interest: string, index: number) => (
+              <div 
+                key={index} 
+                className="p-4 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-800/50 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors"
+              >
+                <p className="text-sm md:text-base text-zinc-700 dark:text-zinc-300">
+                  {interest}
+                </p>
+              </div>
+            ))}
+          </div>
+        </section>
+
         {/* Experience */}
         <section aria-labelledby="experience-heading">
-          <h2 id="experience-heading" className="text-lg md:text-xl font-semibold mb-4 text-zinc-900 dark:text-zinc-50">Experience</h2>
+          <div className="flex justify-between items-center mb-4">
+            <h2 id="experience-heading" className="text-lg md:text-xl font-semibold text-zinc-900 dark:text-zinc-50">Experience</h2>
+            <a 
+              href="/experience" 
+              className="text-sm text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 flex items-center gap-1"
+            >
+              View all
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-arrow-right">
+                <path d="M5 12h14"/>
+                <path d="m12 5 7 7-7 7"/>
+              </svg>
+            </a>
+          </div>
           <div className="space-y-6">
-            {experience.experience.map((exp: Experience, index: number) => (
+            {experience.experience.slice(0, 3).map((exp: Experience, index: number) => (
               <div key={index} className="group">
                 <div className="flex justify-between items-baseline mb-1">
                   <h3 className="font-medium text-base md:text-lg text-zinc-900 dark:text-zinc-50">{exp.role}</h3>
@@ -62,39 +128,12 @@ export default async function HomePage() {
                   )}
                 </p>
                 <ul className="space-y-1.5">
-                  {exp.highlights.map((highlight: string, idx: number) => (
+                  {exp.highlights.slice(0, 2).map((highlight: string, idx: number) => (
                     <li key={idx} className="text-xs md:text-sm text-zinc-600 dark:text-zinc-400 pl-4 relative before:content-['•'] before:absolute before:left-0 before:text-zinc-400">
                       {highlight}
                     </li>
                   ))}
                 </ul>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* Education */}
-        <section aria-labelledby="education-heading">
-          <h2 id="education-heading" className="text-lg md:text-xl font-semibold mb-4 text-zinc-900 dark:text-zinc-50">Education</h2>
-          <div className="space-y-4">
-            {education.education.map((edu: Education, index: number) => (
-              <div key={index}>
-                <div className="flex flex-wrap justify-between items-baseline mb-1">
-                  <h3 className="font-medium text-base md:text-lg text-zinc-900 dark:text-zinc-50">{edu.degree}</h3>
-                  <span className="text-xs md:text-sm text-zinc-600 dark:text-zinc-400">{edu.year}</span>
-                </div>
-                <p className="text-sm md:text-base text-zinc-700 dark:text-zinc-300">
-                  {edu.schoolUrl ? (
-                    <a href={edu.schoolUrl} className="hover:text-zinc-900 dark:hover:text-zinc-50" target="_blank" rel="noopener noreferrer">
-                      {edu.school}
-                    </a>
-                  ) : (
-                    edu.school
-                  )}
-                </p>
-                {edu.description && (
-                  <p className="text-xs md:text-sm text-zinc-600 dark:text-zinc-400 mt-1">{edu.description}</p>
-                )}
               </div>
             ))}
           </div>
@@ -134,47 +173,27 @@ export default async function HomePage() {
           </div>
         </section>
 
-        {/* Skills */}
-        <section aria-labelledby="skills-heading">
-          <h2 id="skills-heading" className="text-lg md:text-xl font-semibold mb-4 text-zinc-900 dark:text-zinc-50">Technical Skills</h2>
-          <div className="space-y-4">
-            {skills.skills.map((skill: Skill, index: number) => (
-              <div key={index}>
-                <h3 className="font-medium text-base md:text-lg text-zinc-900 dark:text-zinc-50 mb-1">{skill.category}</h3>
-                <p className="text-xs md:text-sm text-zinc-600 dark:text-zinc-400">
-                  {skill.items.join(' • ')}
-                </p>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* Research Interests */}
-        <section aria-labelledby="research-heading">
-          <h2 id="research-heading" className="text-lg md:text-xl font-semibold mb-4 text-zinc-900 dark:text-zinc-50">Research Interests</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {research.research_interests.map((interest: string, index: number) => (
-              <div 
-                key={index} 
-                className="p-4 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-800/50 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors"
-              >
-                <p className="text-sm md:text-base text-zinc-700 dark:text-zinc-300">
-                  {interest}
-                </p>
-              </div>
-            ))}
-          </div>
-        </section>
-
         {/* Talks & Presentations */}
         <section aria-labelledby="talks-heading">
-          <h2 id="talks-heading" className="text-lg md:text-xl font-semibold mb-4 text-zinc-900 dark:text-zinc-50">Talks & Presentations</h2>
+          <div className="flex justify-between items-center mb-4">
+            <h2 id="talks-heading" className="text-lg md:text-xl font-semibold text-zinc-900 dark:text-zinc-50">Talks & Presentations</h2>
+            <a 
+              href="/talks" 
+              className="text-sm text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 flex items-center gap-1"
+            >
+              View all
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-arrow-right">
+                <path d="M5 12h14"/>
+                <path d="m12 5 7 7-7 7"/>
+              </svg>
+            </a>
+          </div>
           
           {/* Conference Talks */}
           <div className="mb-6">
             <h3 className="font-medium text-base md:text-lg text-zinc-900 dark:text-zinc-50 mb-3">Conference Talks</h3>
             <div className="space-y-4">
-              {talks.conference_talks.map((talk: Talk, index: number) => (
+              {talks.conference_talks.slice(0, 3).map((talk: Talk, index: number) => (
                 <div key={index} className="group">
                   <h4 className="font-medium text-base text-zinc-900 dark:text-zinc-50 mb-1">
                     {talk.recordingUrl ? (
@@ -198,7 +217,6 @@ export default async function HomePage() {
                     </p>
                     <p><span className="font-medium">Date:</span> {talk.date}</p>
                     <p><span className="font-medium">Location:</span> {talk.location}</p>
-                    <p className="mt-1">{talk.description}</p>
                   </div>
                 </div>
               ))}
@@ -209,7 +227,7 @@ export default async function HomePage() {
           <div className="mb-6">
             <h3 className="font-medium text-base md:text-lg text-zinc-900 dark:text-zinc-50 mb-3">Workshop Presentations</h3>
             <div className="space-y-4">
-              {talks.workshop_presentations.map((talk: Talk, index: number) => (
+              {talks.workshop_presentations.slice(0, 3).map((talk: Talk, index: number) => (
                 <div key={index} className="group">
                   <h4 className="font-medium text-base text-zinc-900 dark:text-zinc-50 mb-1">
                     {talk.recordingUrl ? (
@@ -233,7 +251,6 @@ export default async function HomePage() {
                     </p>
                     <p><span className="font-medium">Date:</span> {talk.date}</p>
                     <p><span className="font-medium">Location:</span> {talk.location}</p>
-                    <p className="mt-1">{talk.description}</p>
                   </div>
                 </div>
               ))}
@@ -244,7 +261,7 @@ export default async function HomePage() {
           <div>
             <h3 className="font-medium text-base md:text-lg text-zinc-900 dark:text-zinc-50 mb-3">Panel Discussions</h3>
             <div className="space-y-4">
-              {talks.panel_discussions.map((talk: Talk, index: number) => (
+              {talks.panel_discussions.slice(0, 3).map((talk: Talk, index: number) => (
                 <div key={index} className="group">
                   <h4 className="font-medium text-base text-zinc-900 dark:text-zinc-50 mb-1">
                     {talk.recordingUrl ? (
@@ -268,7 +285,6 @@ export default async function HomePage() {
                     </p>
                     <p><span className="font-medium">Date:</span> {talk.date}</p>
                     <p><span className="font-medium">Location:</span> {talk.location}</p>
-                    <p className="mt-1">{talk.description}</p>
                   </div>
                 </div>
               ))}
@@ -278,13 +294,25 @@ export default async function HomePage() {
 
         {/* Teaching & Mentoring */}
         <section aria-labelledby="teaching-heading">
-          <h2 id="teaching-heading" className="text-lg md:text-xl font-semibold mb-4 text-zinc-900 dark:text-zinc-50">Teaching & Mentoring</h2>
+          <div className="flex justify-between items-center mb-4">
+            <h2 id="teaching-heading" className="text-lg md:text-xl font-semibold text-zinc-900 dark:text-zinc-50">Teaching & Mentoring</h2>
+            <a 
+              href="/teaching" 
+              className="text-sm text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 flex items-center gap-1"
+            >
+              View all
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-arrow-right">
+                <path d="M5 12h14"/>
+                <path d="m12 5 7 7-7 7"/>
+              </svg>
+            </a>
+          </div>
           
           {/* University Courses */}
           <div className="mb-6">
             <h3 className="font-medium text-base md:text-lg text-zinc-900 dark:text-zinc-50 mb-3">University Courses</h3>
             <div className="space-y-4">
-              {teaching.university_courses.map((course: Teaching, index: number) => (
+              {teaching.university_courses.slice(0, 3).map((course: Teaching, index: number) => (
                 <div key={index} className="group">
                   <h4 className="font-medium text-base text-zinc-900 dark:text-zinc-50 mb-1">
                     {course.courseUrl ? (
@@ -308,7 +336,6 @@ export default async function HomePage() {
                     </p>
                     <p><span className="font-medium">Period:</span> {course.period}</p>
                     <p><span className="font-medium">Role:</span> {course.role}</p>
-                    <p className="mt-1">{course.description}</p>
                   </div>
                 </div>
               ))}
@@ -319,14 +346,13 @@ export default async function HomePage() {
           <div className="mb-6">
             <h3 className="font-medium text-base md:text-lg text-zinc-900 dark:text-zinc-50 mb-3">Workshops & Training</h3>
             <div className="space-y-4">
-              {teaching.workshops_training.map((workshop: Teaching, index: number) => (
+              {teaching.workshops_training.slice(0, 3).map((workshop: Teaching, index: number) => (
                 <div key={index} className="group">
                   <h4 className="font-medium text-base text-zinc-900 dark:text-zinc-50 mb-1">{workshop.title}</h4>
                   <div className="text-xs md:text-sm text-zinc-600 dark:text-zinc-400 space-y-1">
                     <p><span className="font-medium">Organization:</span> {workshop.institution}</p>
                     <p><span className="font-medium">Period:</span> {workshop.period}</p>
                     <p><span className="font-medium">Role:</span> {workshop.role}</p>
-                    <p className="mt-1">{workshop.description}</p>
                   </div>
                 </div>
               ))}
@@ -337,20 +363,35 @@ export default async function HomePage() {
           <div>
             <h3 className="font-medium text-base md:text-lg text-zinc-900 dark:text-zinc-50 mb-3">Mentoring</h3>
             <div className="space-y-4">
-              {teaching.mentoring.map((mentorship: Teaching, index: number) => (
+              {teaching.mentoring.slice(0, 3).map((mentorship: Teaching, index: number) => (
                 <div key={index} className="group">
                   <h4 className="font-medium text-base text-zinc-900 dark:text-zinc-50 mb-1">{mentorship.title}</h4>
                   <div className="text-xs md:text-sm text-zinc-600 dark:text-zinc-400 space-y-1">
                     <p><span className="font-medium">Organization:</span> {mentorship.institution}</p>
                     <p><span className="font-medium">Period:</span> {mentorship.period}</p>
                     <p><span className="font-medium">Role:</span> {mentorship.role}</p>
-                    <p className="mt-1">{mentorship.description}</p>
                   </div>
                 </div>
               ))}
             </div>
           </div>
         </section>
+
+        {/* Skills */}
+        <section aria-labelledby="skills-heading">
+          <h2 id="skills-heading" className="text-lg md:text-xl font-semibold mb-4 text-zinc-900 dark:text-zinc-50">Technical Skills</h2>
+          <div className="space-y-4">
+            {skills.skills.map((skill: Skill, index: number) => (
+              <div key={index}>
+                <h3 className="font-medium text-base md:text-lg text-zinc-900 dark:text-zinc-50 mb-1">{skill.category}</h3>
+                <p className="text-xs md:text-sm text-zinc-600 dark:text-zinc-400">
+                  {skill.items.join(' • ')}
+                </p>
+              </div>
+            ))}
+          </div>
+        </section>
+
       </div>
 
       {/* Footer */}
