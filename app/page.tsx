@@ -83,7 +83,15 @@ export default async function HomePage() {
                   <h3 className="font-medium text-base md:text-lg text-zinc-900 dark:text-zinc-50">{edu.degree}</h3>
                   <span className="text-xs md:text-sm text-zinc-600 dark:text-zinc-400">{edu.year}</span>
                 </div>
-                <p className="text-sm md:text-base text-zinc-700 dark:text-zinc-300">{edu.school}</p>
+                <p className="text-sm md:text-base text-zinc-700 dark:text-zinc-300">
+                  {edu.schoolUrl ? (
+                    <a href={edu.schoolUrl} className="hover:text-zinc-900 dark:hover:text-zinc-50" target="_blank" rel="noopener noreferrer">
+                      {edu.school}
+                    </a>
+                  ) : (
+                    edu.school
+                  )}
+                </p>
                 {edu.description && (
                   <p className="text-xs md:text-sm text-zinc-600 dark:text-zinc-400 mt-1">{edu.description}</p>
                 )}
@@ -168,9 +176,26 @@ export default async function HomePage() {
             <div className="space-y-4">
               {talks.conference_talks.map((talk: Talk, index: number) => (
                 <div key={index} className="group">
-                  <h4 className="font-medium text-base text-zinc-900 dark:text-zinc-50 mb-1">{talk.title}</h4>
+                  <h4 className="font-medium text-base text-zinc-900 dark:text-zinc-50 mb-1">
+                    {talk.recordingUrl ? (
+                      <a href={talk.recordingUrl} className="hover:text-zinc-600 hover:underline dark:hover:text-zinc-300" target="_blank" rel="noopener noreferrer">
+                        {talk.title}
+                      </a>
+                    ) : (
+                      talk.title
+                    )}
+                  </h4>
                   <div className="text-xs md:text-sm text-zinc-600 dark:text-zinc-400 space-y-1">
-                    <p><span className="font-medium">Event:</span> {talk.event}</p>
+                    <p>
+                      <span className="font-medium">Event:</span>{' '}
+                      {talk.eventUrl ? (
+                        <a href={talk.eventUrl} className="hover:text-zinc-900 dark:hover:text-zinc-50" target="_blank" rel="noopener noreferrer">
+                          {talk.event}
+                        </a>
+                      ) : (
+                        talk.event
+                      )}
+                    </p>
                     <p><span className="font-medium">Date:</span> {talk.date}</p>
                     <p><span className="font-medium">Location:</span> {talk.location}</p>
                     <p className="mt-1">{talk.description}</p>
@@ -186,9 +211,26 @@ export default async function HomePage() {
             <div className="space-y-4">
               {talks.workshop_presentations.map((talk: Talk, index: number) => (
                 <div key={index} className="group">
-                  <h4 className="font-medium text-base text-zinc-900 dark:text-zinc-50 mb-1">{talk.title}</h4>
+                  <h4 className="font-medium text-base text-zinc-900 dark:text-zinc-50 mb-1">
+                    {talk.recordingUrl ? (
+                      <a href={talk.recordingUrl} className="hover:text-zinc-600 hover:underline dark:hover:text-zinc-300" target="_blank" rel="noopener noreferrer">
+                        {talk.title}
+                      </a>
+                    ) : (
+                      talk.title
+                    )}
+                  </h4>
                   <div className="text-xs md:text-sm text-zinc-600 dark:text-zinc-400 space-y-1">
-                    <p><span className="font-medium">Event:</span> {talk.event}</p>
+                    <p>
+                      <span className="font-medium">Event:</span>{' '}
+                      {talk.eventUrl ? (
+                        <a href={talk.eventUrl} className="hover:text-zinc-900 dark:hover:text-zinc-50" target="_blank" rel="noopener noreferrer">
+                          {talk.event}
+                        </a>
+                      ) : (
+                        talk.event
+                      )}
+                    </p>
                     <p><span className="font-medium">Date:</span> {talk.date}</p>
                     <p><span className="font-medium">Location:</span> {talk.location}</p>
                     <p className="mt-1">{talk.description}</p>
@@ -204,9 +246,26 @@ export default async function HomePage() {
             <div className="space-y-4">
               {talks.panel_discussions.map((talk: Talk, index: number) => (
                 <div key={index} className="group">
-                  <h4 className="font-medium text-base text-zinc-900 dark:text-zinc-50 mb-1">{talk.title}</h4>
+                  <h4 className="font-medium text-base text-zinc-900 dark:text-zinc-50 mb-1">
+                    {talk.recordingUrl ? (
+                      <a href={talk.recordingUrl} className="hover:text-zinc-600 hover:underline dark:hover:text-zinc-300" target="_blank" rel="noopener noreferrer">
+                        {talk.title}
+                      </a>
+                    ) : (
+                      talk.title
+                    )}
+                  </h4>
                   <div className="text-xs md:text-sm text-zinc-600 dark:text-zinc-400 space-y-1">
-                    <p><span className="font-medium">Event:</span> {talk.event}</p>
+                    <p>
+                      <span className="font-medium">Event:</span>{' '}
+                      {talk.eventUrl ? (
+                        <a href={talk.eventUrl} className="hover:text-zinc-900 dark:hover:text-zinc-50" target="_blank" rel="noopener noreferrer">
+                          {talk.event}
+                        </a>
+                      ) : (
+                        talk.event
+                      )}
+                    </p>
                     <p><span className="font-medium">Date:</span> {talk.date}</p>
                     <p><span className="font-medium">Location:</span> {talk.location}</p>
                     <p className="mt-1">{talk.description}</p>
@@ -227,9 +286,26 @@ export default async function HomePage() {
             <div className="space-y-4">
               {teaching.university_courses.map((course: Teaching, index: number) => (
                 <div key={index} className="group">
-                  <h4 className="font-medium text-base text-zinc-900 dark:text-zinc-50 mb-1">{course.title}</h4>
+                  <h4 className="font-medium text-base text-zinc-900 dark:text-zinc-50 mb-1">
+                    {course.courseUrl ? (
+                      <a href={course.courseUrl} className="hover:text-zinc-600 hover:underline dark:hover:text-zinc-300" target="_blank" rel="noopener noreferrer">
+                        {course.title}
+                      </a>
+                    ) : (
+                      course.title
+                    )}
+                  </h4>
                   <div className="text-xs md:text-sm text-zinc-600 dark:text-zinc-400 space-y-1">
-                    <p><span className="font-medium">Institution:</span> {course.institution}</p>
+                    <p>
+                      <span className="font-medium">Institution:</span>{' '}
+                      {course.institutionUrl ? (
+                        <a href={course.institutionUrl} className="hover:text-zinc-900 dark:hover:text-zinc-50" target="_blank" rel="noopener noreferrer">
+                          {course.institution}
+                        </a>
+                      ) : (
+                        course.institution
+                      )}
+                    </p>
                     <p><span className="font-medium">Period:</span> {course.period}</p>
                     <p><span className="font-medium">Role:</span> {course.role}</p>
                     <p className="mt-1">{course.description}</p>

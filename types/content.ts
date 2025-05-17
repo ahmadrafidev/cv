@@ -13,6 +13,7 @@ export interface Profile {
 export interface Education {
   degree: string;
   school: string;
+  schoolUrl?: string;
   year: string;
   description?: string;
 }
@@ -40,6 +41,8 @@ export interface Publication {
 export interface Talk {
   title: string;
   event: string;
+  eventUrl?: string;
+  recordingUrl?: string;
   date: string;
   location: string;
   description: string;
@@ -48,6 +51,8 @@ export interface Talk {
 export interface Teaching {
   title: string;
   institution: string;
+  institutionUrl?: string;
+  courseUrl?: string;
   period: string;
   role: string;
   description: string;
