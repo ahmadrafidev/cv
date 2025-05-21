@@ -1,5 +1,6 @@
 import { getAllContent } from '@/lib/content';
 import { ContentData } from '@/types/content';
+import Link from 'next/link';
 
 export default async function TalksPage() {
   const content = getAllContent() as ContentData;
@@ -8,7 +9,12 @@ export default async function TalksPage() {
   return (
     <main className="max-w-4xl mx-auto px-6 py-8 print:py-4 min-h-screen bg-white dark:bg-black">
       <header className="border-b border-zinc-200 dark:border-zinc-800 pb-6 mb-8">
-        <h1 className="text-2xl md:text-3xl font-bold tracking-tight mb-2">Talks & Presentations</h1>
+        <div className="flex justify-between items-center">
+          <h1 className="text-2xl md:text-3xl font-bold tracking-tight mb-2">Talks & Presentations</h1>
+          <Link href="/" className="text-sm text-gray-700 dark:text-gray-200 hover:underline">
+            Back Home
+          </Link>
+        </div>
         <p className="text-sm md:text-base text-zinc-600 dark:text-zinc-400">
           A comprehensive list of my speaking engagements, including conference talks, workshop presentations, and panel discussions.
         </p>
