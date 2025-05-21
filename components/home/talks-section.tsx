@@ -1,4 +1,5 @@
 import { ContentData, Talk } from '@/types/content';
+import Link from 'next/link';
 
 interface TalksSectionProps {
   talks: ContentData['talks'];
@@ -9,7 +10,7 @@ export function TalksSection({ talks }: TalksSectionProps) {
     <section aria-labelledby="talks-heading">
       <div className="flex justify-between items-center mb-4">
         <h2 id="talks-heading" className="text-lg md:text-xl font-semibold text-zinc-900 dark:text-zinc-50">Talks & Presentations</h2>
-        <a 
+        <Link 
           href="/talks" 
           className="text-sm text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 flex items-center gap-1"
         >
@@ -18,7 +19,7 @@ export function TalksSection({ talks }: TalksSectionProps) {
             <path d="M5 12h14"/>
             <path d="m12 5 7 7-7 7"/>
           </svg>
-        </a>
+        </Link>
       </div>
       
       {/* Conference Talks */}
@@ -30,9 +31,9 @@ export function TalksSection({ talks }: TalksSectionProps) {
               <div key={index} className="group">
                 <h4 className="font-medium text-base text-zinc-900 dark:text-zinc-50 mb-1">
                   {talk.recordingUrl ? (
-                    <a href={talk.recordingUrl} className="hover:text-zinc-600 hover:underline dark:hover:text-zinc-300" target="_blank" rel="noopener noreferrer">
+                    <Link href={talk.recordingUrl} className="hover:text-zinc-600 hover:underline dark:hover:text-zinc-300" target="_blank" rel="noopener noreferrer">
                       {talk.title}
-                    </a>
+                    </Link>
                   ) : (
                     talk.title
                   )}
@@ -41,9 +42,9 @@ export function TalksSection({ talks }: TalksSectionProps) {
                   <p>
                     <span className="font-medium">Event:</span>{' '}
                     {talk.eventUrl ? (
-                      <a href={talk.eventUrl} className="hover:text-zinc-900 dark:hover:text-zinc-50" target="_blank" rel="noopener noreferrer">
+                      <Link href={talk.eventUrl} className="hover:text-zinc-900 dark:hover:text-zinc-50" target="_blank" rel="noopener noreferrer">
                         {talk.event}
-                      </a>
+                      </Link>
                     ) : (
                       talk.event
                     )}
@@ -66,9 +67,9 @@ export function TalksSection({ talks }: TalksSectionProps) {
               <div key={index} className="group">
                 <h4 className="font-medium text-base text-zinc-900 dark:text-zinc-50 mb-1">
                   {talk.recordingUrl ? (
-                    <a href={talk.recordingUrl} className="hover:text-zinc-600 hover:underline dark:hover:text-zinc-300" target="_blank" rel="noopener noreferrer">
+                    <Link href={talk.recordingUrl} className="hover:text-zinc-600 hover:underline dark:hover:text-zinc-300" target="_blank" rel="noopener noreferrer">
                       {talk.title}
-                    </a>
+                    </Link>
                   ) : (
                     talk.title
                   )}
@@ -77,9 +78,9 @@ export function TalksSection({ talks }: TalksSectionProps) {
                   <p>
                     <span className="font-medium">Event:</span>{' '}
                     {talk.eventUrl ? (
-                      <a href={talk.eventUrl} className="hover:text-zinc-900 dark:hover:text-zinc-50" target="_blank" rel="noopener noreferrer">
+                      <Link href={talk.eventUrl} className="hover:text-zinc-900 dark:hover:text-zinc-50" target="_blank" rel="noopener noreferrer">
                         {talk.event}
-                      </a>
+                      </Link>
                     ) : (
                       talk.event
                     )}
@@ -101,9 +102,9 @@ export function TalksSection({ talks }: TalksSectionProps) {
               <div key={index} className="group">
                 <h4 className="font-medium text-base text-zinc-900 dark:text-zinc-50 mb-1">
                   {talk.recordingUrl ? (
-                    <a href={talk.recordingUrl} className="hover:text-zinc-600 hover:underline dark:hover:text-zinc-300" target="_blank" rel="noopener noreferrer">
+                    <Link href={talk.recordingUrl} className="hover:text-zinc-600 hover:underline dark:hover:text-zinc-300" target="_blank" rel="noopener noreferrer">
                       {talk.title}
-                    </a>
+                    </Link>
                   ) : (
                     talk.title
                   )}
@@ -112,9 +113,9 @@ export function TalksSection({ talks }: TalksSectionProps) {
                   <p>
                     <span className="font-medium">Event:</span>{' '}
                     {talk.eventUrl ? (
-                      <a href={talk.eventUrl} className="hover:text-zinc-900 dark:hover:text-zinc-50" target="_blank" rel="noopener noreferrer">
+                      <Link href={talk.eventUrl} className="hover:text-zinc-900 dark:hover:text-zinc-50" target="_blank" rel="noopener noreferrer">
                         {talk.event}
-                      </a>
+                      </Link>
                     ) : (
                       talk.event
                     )}

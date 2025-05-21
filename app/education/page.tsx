@@ -16,7 +16,7 @@ export default async function EducationPage() {
           </Link>
         </div>
         <p className="text-sm md:text-base text-zinc-600 dark:text-zinc-400">
-          A detailed summary of my academic journey and educational background.
+          A comprehensive overview of my academic background and qualifications.
         </p>
       </header>
 
@@ -29,9 +29,9 @@ export default async function EducationPage() {
             </div>
             <p className="text-base text-zinc-700 dark:text-zinc-300 mb-2">
               {edu.schoolUrl ? (
-                <a href={edu.schoolUrl} className="hover:text-zinc-900 dark:hover:text-zinc-50" target="_blank" rel="noopener noreferrer">
+                <Link href={edu.schoolUrl} className="hover:text-zinc-900 dark:hover:text-zinc-50" target="_blank" rel="noopener noreferrer">
                   {edu.school}
-                </a>
+                </Link>
               ) : (
                 edu.school
               )}

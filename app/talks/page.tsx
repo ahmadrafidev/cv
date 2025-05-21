@@ -31,9 +31,9 @@ export default async function TalksPage() {
               <div key={index} className="group">
                 <h3 className="font-medium text-lg text-zinc-900 dark:text-zinc-50 mb-2">
                   {talk.recordingUrl ? (
-                    <a href={talk.recordingUrl} className="hover:text-zinc-600 hover:underline dark:hover:text-zinc-300" target="_blank" rel="noopener noreferrer">
+                    <Link href={talk.recordingUrl} className="hover:text-zinc-600 hover:underline dark:hover:text-zinc-300" target="_blank" rel="noopener noreferrer">
                       {talk.title}
-                    </a>
+                    </Link>
                   ) : (
                     talk.title
                   )}
@@ -42,9 +42,9 @@ export default async function TalksPage() {
                   <p>
                     <span className="font-medium">Event:</span>{' '}
                     {talk.eventUrl ? (
-                      <a href={talk.eventUrl} className="hover:text-zinc-900 dark:hover:text-zinc-50" target="_blank" rel="noopener noreferrer">
+                      <Link href={talk.eventUrl} className="hover:text-zinc-900 dark:hover:text-zinc-50" target="_blank" rel="noopener noreferrer">
                         {talk.event}
-                      </a>
+                      </Link>
                     ) : (
                       talk.event
                     )}
@@ -68,9 +68,9 @@ export default async function TalksPage() {
               <div key={index} className="group">
                 <h3 className="font-medium text-lg text-zinc-900 dark:text-zinc-50 mb-2">
                   {talk.recordingUrl ? (
-                    <a href={talk.recordingUrl} className="hover:text-zinc-600 hover:underline dark:hover:text-zinc-300" target="_blank" rel="noopener noreferrer">
+                    <Link href={talk.recordingUrl} className="hover:text-zinc-600 hover:underline dark:hover:text-zinc-300" target="_blank" rel="noopener noreferrer">
                       {talk.title}
-                    </a>
+                    </Link>
                   ) : (
                     talk.title
                   )}
@@ -79,9 +79,9 @@ export default async function TalksPage() {
                   <p>
                     <span className="font-medium">Event:</span>{' '}
                     {talk.eventUrl ? (
-                      <a href={talk.eventUrl} className="hover:text-zinc-900 dark:hover:text-zinc-50" target="_blank" rel="noopener noreferrer">
+                      <Link href={talk.eventUrl} className="hover:text-zinc-900 dark:hover:text-zinc-50" target="_blank" rel="noopener noreferrer">
                         {talk.event}
-                      </a>
+                      </Link>
                     ) : (
                       talk.event
                     )}
@@ -105,9 +105,9 @@ export default async function TalksPage() {
               <div key={index} className="group">
                 <h3 className="font-medium text-lg text-zinc-900 dark:text-zinc-50 mb-2">
                   {talk.recordingUrl ? (
-                    <a href={talk.recordingUrl} className="hover:text-zinc-600 hover:underline dark:hover:text-zinc-300" target="_blank" rel="noopener noreferrer">
+                    <Link href={talk.recordingUrl} className="hover:text-zinc-600 hover:underline dark:hover:text-zinc-300" target="_blank" rel="noopener noreferrer">
                       {talk.title}
-                    </a>
+                    </Link>
                   ) : (
                     talk.title
                   )}
@@ -116,9 +116,9 @@ export default async function TalksPage() {
                   <p>
                     <span className="font-medium">Event:</span>{' '}
                     {talk.eventUrl ? (
-                      <a href={talk.eventUrl} className="hover:text-zinc-900 dark:hover:text-zinc-50" target="_blank" rel="noopener noreferrer">
+                      <Link href={talk.eventUrl} className="hover:text-zinc-900 dark:hover:text-zinc-50" target="_blank" rel="noopener noreferrer">
                         {talk.event}
-                      </a>
+                      </Link>
                     ) : (
                       talk.event
                     )}

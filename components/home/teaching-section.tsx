@@ -1,4 +1,5 @@
 import { ContentData, Teaching } from '@/types/content';
+import Link from 'next/link';
 
 interface TeachingSectionProps {
   teaching: ContentData['teaching'];
@@ -9,7 +10,7 @@ export function TeachingSection({ teaching }: TeachingSectionProps) {
     <section aria-labelledby="teaching-heading">
       <div className="flex justify-between items-center mb-4">
         <h2 id="teaching-heading" className="text-lg md:text-xl font-semibold text-zinc-900 dark:text-zinc-50">Teaching & Mentoring</h2>
-        <a 
+        <Link 
           href="/teaching" 
           className="text-sm text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 flex items-center gap-1"
         >
@@ -18,7 +19,7 @@ export function TeachingSection({ teaching }: TeachingSectionProps) {
             <path d="M5 12h14"/>
             <path d="m12 5 7 7-7 7"/>
           </svg>
-        </a>
+        </Link>
       </div>
       
       {teaching.university_courses && teaching.university_courses.length > 0 && (
@@ -29,9 +30,9 @@ export function TeachingSection({ teaching }: TeachingSectionProps) {
               <div key={index} className="group">
                 <h4 className="font-medium text-base text-zinc-900 dark:text-zinc-50 mb-1">
                   {course.courseUrl ? (
-                    <a href={course.courseUrl} className="hover:text-zinc-600 hover:underline dark:hover:text-zinc-300" target="_blank" rel="noopener noreferrer">
+                    <Link href={course.courseUrl} className="hover:text-zinc-600 hover:underline dark:hover:text-zinc-300" target="_blank" rel="noopener noreferrer">
                       {course.title}
-                    </a>
+                    </Link>
                   ) : (
                     course.title
                   )}
@@ -40,9 +41,9 @@ export function TeachingSection({ teaching }: TeachingSectionProps) {
                   <p>
                     <span className="font-medium">Institution:</span>{' '}
                     {course.institutionUrl ? (
-                      <a href={course.institutionUrl} className="hover:text-zinc-900 dark:hover:text-zinc-50" target="_blank" rel="noopener noreferrer">
+                      <Link href={course.institutionUrl} className="hover:text-zinc-900 dark:hover:text-zinc-50" target="_blank" rel="noopener noreferrer">
                         {course.institution}
-                      </a>
+                      </Link>
                     ) : (
                       course.institution
                     )}

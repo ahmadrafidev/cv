@@ -26,9 +26,9 @@ export default async function PublicationsPage() {
           <div key={index} className="border-b border-zinc-200 dark:border-zinc-800 pb-6 last:border-0">
             <h2 className="font-medium text-base md:text-lg text-zinc-900 dark:text-zinc-50 mb-2">
               {pub.link ? (
-                <a href={pub.link} className="hover:text-zinc-600 hover:underline dark:hover:text-zinc-300">
+                <Link href={pub.link} className="hover:text-zinc-600 hover:underline dark:hover:text-zinc-300" target="_blank" rel="noopener noreferrer">
                   {pub.title}
-                </a>
+                </Link>
               ) : (
                 pub.title
               )}

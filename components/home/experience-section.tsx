@@ -1,4 +1,5 @@
 import { ContentData, Experience } from '@/types/content';
+import Link from 'next/link';
 
 interface ExperienceSectionProps {
   experience: ContentData['experience'];
@@ -9,7 +10,7 @@ export function ExperienceSection({ experience }: ExperienceSectionProps) {
     <section aria-labelledby="experience-heading">
       <div className="flex justify-between items-center mb-4">
         <h2 id="experience-heading" className="text-lg md:text-xl font-semibold text-zinc-900 dark:text-zinc-50">Experience</h2>
-        <a 
+        <Link 
           href="/experience" 
           className="text-sm text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 flex items-center gap-1"
         >
@@ -18,7 +19,7 @@ export function ExperienceSection({ experience }: ExperienceSectionProps) {
             <path d="M5 12h14"/>
             <path d="m12 5 7 7-7 7"/>
           </svg>
-        </a>
+        </Link>
       </div>
       <div className="space-y-6">
         {experience.experience.slice(0, 3).map((exp: Experience, index: number) => (
@@ -29,9 +30,9 @@ export function ExperienceSection({ experience }: ExperienceSectionProps) {
             </div>
             <p className="text-xs md:text-sm text-zinc-700 dark:text-zinc-300 mb-2">
               {exp.companyUrl ? (
-                <a href={exp.companyUrl} className="hover:text-zinc-900 dark:hover:text-zinc-50" target="_blank" rel="noopener noreferrer">
+                <Link href={exp.companyUrl} className="hover:text-zinc-900 dark:hover:text-zinc-50" target="_blank" rel="noopener noreferrer">
                   {exp.company}
-                </a>
+                </Link>
               ) : (
                 exp.company
               )}

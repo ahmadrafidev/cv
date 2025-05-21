@@ -31,9 +31,9 @@ export default async function TeachingPage() {
               <div key={index} className="group">
                 <h3 className="font-medium text-lg text-zinc-900 dark:text-zinc-50 mb-2">
                   {course.courseUrl ? (
-                    <a href={course.courseUrl} className="hover:text-zinc-600 hover:underline dark:hover:text-zinc-300" target="_blank" rel="noopener noreferrer">
+                    <Link href={course.courseUrl} className="hover:text-zinc-600 hover:underline dark:hover:text-zinc-300" target="_blank" rel="noopener noreferrer">
                       {course.title}
-                    </a>
+                    </Link>
                   ) : (
                     course.title
                   )}
@@ -42,9 +42,9 @@ export default async function TeachingPage() {
                   <p>
                     <span className="font-medium">Institution:</span>{' '}
                     {course.institutionUrl ? (
-                      <a href={course.institutionUrl} className="hover:text-zinc-900 dark:hover:text-zinc-50" target="_blank" rel="noopener noreferrer">
+                      <Link href={course.institutionUrl} className="hover:text-zinc-900 dark:hover:text-zinc-50" target="_blank" rel="noopener noreferrer">
                         {course.institution}
-                      </a>
+                      </Link>
                     ) : (
                       course.institution
                     )}
