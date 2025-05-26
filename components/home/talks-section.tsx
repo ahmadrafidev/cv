@@ -12,7 +12,7 @@ export function TalksSection({ talks }: TalksSectionProps) {
         <h2 id="talks-heading" className="text-lg md:text-xl font-semibold text-zinc-900 dark:text-zinc-50">Talks & Presentations</h2>
         <Link 
           href="/talks" 
-          className="text-sm text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 flex items-center gap-1"
+          className="text-sm text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 hover:bg-zinc-100 dark:hover:bg-zinc-800 px-2 py-1 rounded-md transition-all duration-200  flex items-center gap-1"
         >
           View all
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-arrow-right">
@@ -31,7 +31,12 @@ export function TalksSection({ talks }: TalksSectionProps) {
               <div key={index} className="group">
                 <h4 className="font-medium text-base text-zinc-900 dark:text-zinc-50 mb-1">
                   {talk.recordingUrl ? (
-                    <Link href={talk.recordingUrl} className="hover:text-zinc-600 hover:underline dark:hover:text-zinc-300" target="_blank" rel="noopener noreferrer">
+                    <Link 
+                      href={talk.recordingUrl} 
+                      className="hover:text-zinc-600 hover:underline dark:hover:text-zinc-300 hover:bg-zinc-100 dark:hover:bg-zinc-800 px-1 py-0.5 rounded transition-all duration-200 inline-block" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                    >
                       {talk.title}
                     </Link>
                   ) : (
@@ -42,7 +47,12 @@ export function TalksSection({ talks }: TalksSectionProps) {
                   <p>
                     <span className="font-medium">Event:</span>{' '}
                     {talk.eventUrl ? (
-                      <Link href={talk.eventUrl} className="hover:text-zinc-900 dark:hover:text-zinc-50" target="_blank" rel="noopener noreferrer">
+                      <Link 
+                        href={talk.eventUrl} 
+                        className="hover:text-zinc-900 dark:hover:text-zinc-50 hover:bg-zinc-100 dark:hover:bg-zinc-800 px-1 py-0.5 rounded transition-all duration-200 hover:underline" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                      >
                         {talk.event}
                       </Link>
                     ) : (
@@ -67,7 +77,12 @@ export function TalksSection({ talks }: TalksSectionProps) {
               <div key={index} className="group">
                 <h4 className="font-medium text-base text-zinc-900 dark:text-zinc-50 mb-1">
                   {talk.recordingUrl ? (
-                    <Link href={talk.recordingUrl} className="hover:text-zinc-600 hover:underline dark:hover:text-zinc-300" target="_blank" rel="noopener noreferrer">
+                    <Link 
+                      href={talk.recordingUrl} 
+                      className="hover:text-zinc-600 hover:underline dark:hover:text-zinc-300 hover:bg-zinc-100 dark:hover:bg-zinc-800 px-1 py-0.5 rounded transition-all duration-200 inline-block" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                    >
                       {talk.title}
                     </Link>
                   ) : (
@@ -78,7 +93,12 @@ export function TalksSection({ talks }: TalksSectionProps) {
                   <p>
                     <span className="font-medium">Event:</span>{' '}
                     {talk.eventUrl ? (
-                      <Link href={talk.eventUrl} className="hover:text-zinc-900 dark:hover:text-zinc-50" target="_blank" rel="noopener noreferrer">
+                      <Link 
+                        href={talk.eventUrl} 
+                        className="hover:text-zinc-900 dark:hover:text-zinc-50 hover:bg-zinc-100 dark:hover:bg-zinc-800 px-1 py-0.5 rounded transition-all duration-200 hover:underline" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                      >
                         {talk.event}
                       </Link>
                     ) : (
@@ -102,7 +122,12 @@ export function TalksSection({ talks }: TalksSectionProps) {
               <div key={index} className="group">
                 <h4 className="font-medium text-base text-zinc-900 dark:text-zinc-50 mb-1">
                   {talk.recordingUrl ? (
-                    <Link href={talk.recordingUrl} className="hover:text-zinc-600 hover:underline dark:hover:text-zinc-300" target="_blank" rel="noopener noreferrer">
+                    <Link 
+                      href={talk.recordingUrl} 
+                      className="hover:text-zinc-600 hover:underline dark:hover:text-zinc-300 hover:bg-zinc-100 dark:hover:bg-zinc-800 px-1 py-0.5 rounded transition-all duration-200 inline-block" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                    >
                       {talk.title}
                     </Link>
                   ) : (
@@ -113,7 +138,12 @@ export function TalksSection({ talks }: TalksSectionProps) {
                   <p>
                     <span className="font-medium">Event:</span>{' '}
                     {talk.eventUrl ? (
-                      <Link href={talk.eventUrl} className="hover:text-zinc-900 dark:hover:text-zinc-50" target="_blank" rel="noopener noreferrer">
+                      <Link 
+                        href={talk.eventUrl} 
+                        className="hover:text-zinc-900 dark:hover:text-zinc-50 hover:bg-zinc-100 dark:hover:bg-zinc-800 px-1 py-0.5 rounded transition-all duration-200 hover:underline" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                      >
                         {talk.event}
                       </Link>
                     ) : (

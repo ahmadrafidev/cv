@@ -12,7 +12,7 @@ export function EducationSection({ education }: EducationSectionProps) {
         <h2 id="education-heading" className="text-lg md:text-xl font-semibold text-zinc-900 dark:text-zinc-50">Education</h2>
         <Link 
           href="/education" 
-          className="text-sm text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 flex items-center gap-1"
+          className="text-sm text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 hover:bg-zinc-100 dark:hover:bg-zinc-800 px-2 py-1 rounded-md transition-all duration-200 flex items-center gap-1"
         >
           View all
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-arrow-right">
@@ -23,20 +23,28 @@ export function EducationSection({ education }: EducationSectionProps) {
       </div>
       <div className="space-y-4">
         {education.education.slice(0, 3).map((edu: Education, index: number) => (
-          <div key={index}>
-            <div className="flex flex-wrap justify-between items-baseline mb-1">
+          <div key={index} className="group">
+            <div className="flex justify-between items-baseline mb-1">
               <h3 className="font-medium text-base md:text-lg text-zinc-900 dark:text-zinc-50">{edu.degree}</h3>
-              <span className="text-xs md:text-sm text-zinc-600 dark:text-zinc-400">{edu.year}</span>
+              <span className="text-xs md:text-sm text-zinc-600 dark:text-zinc-400">{edu.period}</span>
             </div>
-            <p className="text-sm md:text-base text-zinc-700 dark:text-zinc-300">
+            <p className="text-xs md:text-sm text-zinc-700 dark:text-zinc-300 mb-2">
               {edu.schoolUrl ? (
-                <Link href={edu.schoolUrl} className="hover:text-zinc-900 dark:hover:text-zinc-50" target="_blank" rel="noopener noreferrer">
+                <Link 
+                  href={edu.schoolUrl} 
+                  className="hover:text-zinc-900 dark:hover:text-zinc-50 hover:bg-zinc-100 dark:hover:bg-zinc-800 px-1 py-0.5 rounded transition-all duration-200 hover:underline" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
                   {edu.school}
                 </Link>
               ) : (
                 edu.school
               )}
             </p>
+            {edu.details && (
+              <p className="text-xs md:text-sm text-zinc-600 dark:text-zinc-400">{edu.details}</p>
+            )}
           </div>
         ))}
       </div>

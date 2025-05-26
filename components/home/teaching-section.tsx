@@ -12,7 +12,7 @@ export function TeachingSection({ teaching }: TeachingSectionProps) {
         <h2 id="teaching-heading" className="text-lg md:text-xl font-semibold text-zinc-900 dark:text-zinc-50">Teaching & Mentoring</h2>
         <Link 
           href="/teaching" 
-          className="text-sm text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 flex items-center gap-1"
+          className="text-sm text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 hover:bg-zinc-100 dark:hover:bg-zinc-800 px-2 py-1 rounded-md transition-all duration-200  flex items-center gap-1"
         >
           View all
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-arrow-right">
@@ -30,7 +30,7 @@ export function TeachingSection({ teaching }: TeachingSectionProps) {
               <div key={index} className="group">
                 <h4 className="font-medium text-base text-zinc-900 dark:text-zinc-50 mb-1">
                   {course.courseUrl ? (
-                    <Link href={course.courseUrl} className="hover:text-zinc-600 hover:underline dark:hover:text-zinc-300" target="_blank" rel="noopener noreferrer">
+                    <Link href={course.courseUrl} className="hover:text-zinc-600 hover:underline dark:hover:text-zinc-300 hover:bg-zinc-100 dark:hover:bg-zinc-800 px-1 py-0.5 rounded transition-all duration-200" target="_blank" rel="noopener noreferrer">
                       {course.title}
                     </Link>
                   ) : (
@@ -41,7 +41,7 @@ export function TeachingSection({ teaching }: TeachingSectionProps) {
                   <p>
                     <span className="font-medium">Institution:</span>{' '}
                     {course.institutionUrl ? (
-                      <Link href={course.institutionUrl} className="hover:text-zinc-900 dark:hover:text-zinc-50" target="_blank" rel="noopener noreferrer">
+                      <Link href={course.institutionUrl} className="hover:text-zinc-900 dark:hover:text-zinc-50 hover:bg-zinc-100 dark:hover:bg-zinc-800 px-1 py-0.5 rounded transition-all duration-200 hover:underline" target="_blank" rel="noopener noreferrer">
                         {course.institution}
                       </Link>
                     ) : (

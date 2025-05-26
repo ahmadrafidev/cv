@@ -12,7 +12,7 @@ export function ExperienceSection({ experience }: ExperienceSectionProps) {
         <h2 id="experience-heading" className="text-lg md:text-xl font-semibold text-zinc-900 dark:text-zinc-50">Experience</h2>
         <Link 
           href="/experience" 
-          className="text-sm text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 flex items-center gap-1"
+          className="text-sm text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 hover:bg-zinc-100 dark:hover:bg-zinc-800 px-2 py-1 rounded-md transition-all duration-200 flex items-center gap-1"
         >
           View all
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-arrow-right">
@@ -30,7 +30,12 @@ export function ExperienceSection({ experience }: ExperienceSectionProps) {
             </div>
             <p className="text-xs md:text-sm text-zinc-700 dark:text-zinc-300 mb-2">
               {exp.companyUrl ? (
-                <Link href={exp.companyUrl} className="hover:text-zinc-900 dark:hover:text-zinc-50" target="_blank" rel="noopener noreferrer">
+                <Link 
+                  href={exp.companyUrl} 
+                  className="hover:text-zinc-900 dark:hover:text-zinc-50 hover:bg-zinc-100 dark:hover:bg-zinc-800 px-1 py-0.5 rounded transition-all duration-200 hover:underline" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
                   {exp.company}
                 </Link>
               ) : (

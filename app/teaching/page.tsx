@@ -11,7 +11,10 @@ export default async function TeachingPage() {
       <header className="border-b border-zinc-200 dark:border-zinc-800 pb-6 mb-8">
         <div className="flex justify-between items-center">
           <h1 className="text-2xl md:text-3xl font-bold tracking-tight mb-2">Teaching & Mentoring</h1>
-          <Link href="/" className="text-sm text-gray-700 dark:text-gray-200 hover:underline">
+          <Link 
+            href="/" 
+            className="text-sm text-gray-700 dark:text-gray-200 hover:underline hover:bg-zinc-100 dark:hover:bg-zinc-800 px-2 py-1 rounded transition-all duration-200"
+          >
             Back Home
           </Link>
         </div>
@@ -31,7 +34,12 @@ export default async function TeachingPage() {
               <div key={index} className="group">
                 <h3 className="font-medium text-lg text-zinc-900 dark:text-zinc-50 mb-2">
                   {course.courseUrl ? (
-                    <Link href={course.courseUrl} className="hover:text-zinc-600 hover:underline dark:hover:text-zinc-300" target="_blank" rel="noopener noreferrer">
+                    <Link 
+                      href={course.courseUrl} 
+                      className="hover:text-zinc-600 hover:underline dark:hover:text-zinc-300 hover:bg-zinc-100 dark:hover:bg-zinc-800 px-1 py-0.5 rounded transition-all duration-200 inline-block" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                    >
                       {course.title}
                     </Link>
                   ) : (
@@ -42,7 +50,12 @@ export default async function TeachingPage() {
                   <p>
                     <span className="font-medium">Institution:</span>{' '}
                     {course.institutionUrl ? (
-                      <Link href={course.institutionUrl} className="hover:text-zinc-900 dark:hover:text-zinc-50" target="_blank" rel="noopener noreferrer">
+                      <Link 
+                        href={course.institutionUrl} 
+                        className="hover:text-zinc-900 dark:hover:text-zinc-50 hover:bg-zinc-100 dark:hover:bg-zinc-800 px-1 py-0.5 rounded transition-all duration-200 hover:underline" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                      >
                         {course.institution}
                       </Link>
                     ) : (
