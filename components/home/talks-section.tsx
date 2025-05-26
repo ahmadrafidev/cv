@@ -12,10 +12,21 @@ export function TalksSection({ talks }: TalksSectionProps) {
         <h2 id="talks-heading" className="text-lg md:text-xl font-semibold text-zinc-900 dark:text-zinc-50">Talks & Presentations</h2>
         <Link 
           href="/talks" 
-          className="text-sm text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 hover:bg-zinc-100 dark:hover:bg-zinc-800 px-2 py-1 rounded-md transition-all duration-200  flex items-center gap-1"
+          className="group text-sm text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 hover:bg-zinc-100 dark:hover:bg-zinc-800 px-3 py-1.5 rounded-lg transition-all duration-200 flex items-center gap-1.5"
         >
           View all
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-arrow-right">
+          <svg 
+            xmlns="http://www.w3.org/2000/svg" 
+            width="14" 
+            height="14" 
+            viewBox="0 0 24 24" 
+            fill="none" 
+            stroke="currentColor" 
+            strokeWidth="2" 
+            strokeLinecap="round" 
+            strokeLinejoin="round" 
+            className="transition-transform duration-200 group-hover:translate-x-0.5"
+          >
             <path d="M5 12h14"/>
             <path d="m12 5 7 7-7 7"/>
           </svg>
