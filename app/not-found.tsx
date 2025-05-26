@@ -12,7 +12,6 @@ export default function NotFound() {
       </div>
 
       <div className="relative z-10 max-w-2xl mx-auto">
-        {/* 404 Number with enhanced styling */}
         <div className="mb-8">
           <h1 className="text-8xl md:text-9xl font-black text-gray-800 dark:text-gray-200">
             404
