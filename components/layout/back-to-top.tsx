@@ -20,7 +20,6 @@ export function BackToTop({ showAfter = 300, className = '' }: BackToTopProps) {
       }
     };
 
-    // Throttle scroll events for better performance
     let timeoutId: NodeJS.Timeout;
     const handleScroll = () => {
       clearTimeout(timeoutId);
@@ -46,7 +45,7 @@ export function BackToTop({ showAfter = 300, className = '' }: BackToTopProps) {
     <button
       onClick={scrollToTop}
       className={`
-        fixed bottom-6 right-6 z-50
+        fixed bottom-6 right-6 md:right-[calc(50%-32rem+1.5rem)] z-50
         w-12 h-12
         bg-gray-900 hover:bg-gray-800 dark:bg-gray-100 dark:hover:bg-gray-200
         text-white dark:text-gray-900

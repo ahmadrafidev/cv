@@ -1,6 +1,5 @@
 import { getAllContent } from '@/lib/content';
 import { ContentData } from '@/types/content';
-
 import { ProfileHeader } from '@/components/home/profile-header';
 import { EducationSection } from '@/components/home/education-section';
 import { ResearchSection } from '@/components/home/research-section';
@@ -19,7 +18,7 @@ export default async function HomePage() {
 
   return (
     <main className="max-w-4xl mx-auto px-6 py-8 print:py-4 min-h-screen bg-white dark:bg-black">
-      <div className="fixed top-4 right-[calc(50%-32rem+1.5rem)] z-50">
+      <div className="fixed top-4 right-1 md:right-[calc(50%-32rem+1.5rem)] z-50">
         <ThemeToggle />
       </div>
       <ProfileHeader profile={profile} />
