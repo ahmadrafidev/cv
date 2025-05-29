@@ -1,6 +1,6 @@
-# How to Customize Your CV
+# How to Customize
 
-This guide will help you modify the content of your CV without any coding knowledge. All you need is a text editor (like Notepad, TextEdit, or VS Code) and basic knowledge of Markdown formatting.
+This guide will help you modify the content of your cv without any coding knowledge. All you need is a text editor (like Notepad, TextEdit, or VS Code) and basic knowledge of Markdown formatting.
 
 ## 📁 Where to Make Changes
 

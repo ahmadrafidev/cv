@@ -10,7 +10,7 @@ export function Footer() {
         </Link>
         {' '}Feel free to{' '}
         <Link 
-          href="https://github.com/ahmadrafidev/cv" 
+          href="https://github.com/ahmadrafidev/scho" 
           className="underline hover:text-black dark:hover:text-white transition-colors"
           target="_blank"
           rel="noopener noreferrer"

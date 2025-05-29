@@ -25,8 +25,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "CV - Academic Portfolio Platform",
-    template: "%s | CV"
+    default: "Scho - A Sleek Resume Template",
+    template: "%s | Scho"
   },
   description: "A modern and sleek academic portfolio platform for researchers, scholars, and thinkers.",
   keywords: ["academic", "portfolio", "research", "scholar", "education", "university"],
@@ -34,10 +34,10 @@ export const metadata: Metadata = {
   creator: "Rafi",
   metadataBase: new URL("https://scho.vercel.app/"),
   openGraph: {
-    title: "CV - Academic Portfolio Platform",
+    title: "Scho - A Sleek Resume Template",
     description: "A modern and sleek academic portfolio platform for researchers, scholars, and thinkers.",
     url: "https://scho.vercel.app/",
-    siteName: "CV",
+    siteName: "Scho",
     locale: "en_US",
     type: "website",
     images: [
@@ -45,13 +45,13 @@ export const metadata: Metadata = {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "CV - Professional Portfolio"
+        alt: "Scho - Professional Portfolio"
       }
     ]
   },
   twitter: {
     card: "summary_large_image",
-    title: "CV - Academic Portfolio Platform",
+    title: "Scho - Academic Portfolio Platform",
     description: "A modern and sleek academic portfolio platform for researchers, scholars, and thinkers.",
     images: ["/og-image.jpg"],
   },

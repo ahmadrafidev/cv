@@ -1,8 +1,8 @@
-# CV
+# Scho
 
 *A sleek academic resume template for researchers, scholars, and thinkers.*
 
-CV is a minimalist, responsive personal website template built for academics, researchers, and graduate students. Showcase your publications, research interests, CV, and professional journey — all in one elegant place. Designed with clarity and simplicity in mind, CV helps you present your scholarly work and personal story with confidence.
+Scho is a minimalist, responsive personal website template built for academics, researchers, and graduate students. Showcase your publications, research interests, resume, and professional journey — all in one elegant place. Designed with clarity and simplicity in mind, scho helps you present your scholarly work and personal story with confidence.
 
 ---
 
@@ -21,13 +21,13 @@ CV is a minimalist, responsive personal website template built for academics, re
 
 ## 📦 Getting Started (Local Development)
 
-To get started with CV locally:
+To get started with Scho locally:
 
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/ahmadrafidev/cv.git
-cd cv
+git clone https://github.com/ahmadrafidev/scho.git
+cd scho
 ```
 
 ### 2. Install Dependencies
@@ -42,7 +42,7 @@ pnpm install
 pnpm dev
 ```
 
-Visit [http://localhost:3000](http://localhost:3000) in your browser to view your CV site.
+Visit [http://localhost:3000](http://localhost:3000) in your browser to view your Scho site.
 
 ---
 
