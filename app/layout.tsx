@@ -3,7 +3,6 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { ThemeProvider } from "next-themes";
 
 import PrintHandler from "@/components/PrintHandler";
-import { ThemeToggle } from "@/components/ThemeToggle";
 
 import "./globals.css";
 
@@ -51,7 +50,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Scho - Academic Portfolio Platform",
+    title: "Scho - A Sleek Resume Template",
     description: "A modern and sleek academic portfolio platform for researchers, scholars, and thinkers.",
     images: ["/og-image.jpg"],
   },
@@ -83,9 +82,6 @@ export default function RootLayout({
     <html lang="en" className={`scroll-smooth ${geistSans.variable} ${geistMono.variable}`} suppressHydrationWarning>
       <body className="font-sans bg-white text-black dark:bg-zinc-950 dark:text-zinc-100 antialiased">
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <div className="fixed top-4 right-[calc(50%-32rem+1.5rem)] z-50">
-            <ThemeToggle />
-          </div>
           <PrintHandler />
           <div className="print-container">
             {children}
