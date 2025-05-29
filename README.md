@@ -81,6 +81,7 @@ types/                # TypeScript type definitions
 - Customize styles using Tailwind CSS in `app/globals.css`
 - Add or remove sections as needed
 - Replace placeholders with your personal info and data
+- For more, read [this documentation](./HOW_TO_USE.md)
 
 ---
 
