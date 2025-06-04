@@ -1,5 +1,6 @@
 import { getAllContent } from '@/lib/content';
 import { ContentData } from '@/types/content';
+import { BackHomeButton } from '@/components/back-home-button';
 import Link from 'next/link';
 
 export default async function TalksPage() {
@@ -10,16 +11,11 @@ export default async function TalksPage() {
     <main className="max-w-4xl mx-auto px-6 py-8 print:py-4 min-h-screen bg-white dark:bg-black">
       <header className="border-b border-zinc-200 dark:border-zinc-800 pb-6 mb-8">
         <div className="flex justify-between items-center">
-          <h1 className="text-2xl md:text-3xl font-bold tracking-tight mb-2">Talks & Presentations</h1>
-          <Link 
-            href="/" 
-            className="text-sm text-gray-700 dark:text-gray-200 hover:underline hover:bg-zinc-100 dark:hover:bg-zinc-800 px-2 py-1 rounded transition-all duration-200"
-          >
-            Back Home
-          </Link>
+          <h1 className="text-2xl md:text-3xl font-bold tracking-tight mb-2">Talks</h1>
+          <BackHomeButton />
         </div>
         <p className="text-sm md:text-base text-zinc-600 dark:text-zinc-400">
-          A comprehensive list of my speaking engagements, including conference talks, workshop presentations, and panel discussions.
+          A collection of my speaking engagements and presentations.
         </p>
       </header>
 

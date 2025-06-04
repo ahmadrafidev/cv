@@ -1,6 +1,7 @@
 import { getAllContent } from '@/lib/content';
 import { ContentData } from '@/types/content';
 import Link from 'next/link';
+import { BackHomeButton } from '@/components/back-home-button';
 
 export default async function TeachingPage() {
   const content = getAllContent() as ContentData;
@@ -11,12 +12,7 @@ export default async function TeachingPage() {
       <header className="border-b border-zinc-200 dark:border-zinc-800 pb-6 mb-8">
         <div className="flex justify-between items-center">
           <h1 className="text-2xl md:text-3xl font-bold tracking-tight mb-2">Teaching & Mentoring</h1>
-          <Link 
-            href="/" 
-            className="text-sm text-gray-700 dark:text-gray-200 hover:underline hover:bg-zinc-100 dark:hover:bg-zinc-800 px-2 py-1 rounded transition-all duration-200"
-          >
-            Back Home
-          </Link>
+          <BackHomeButton />
         </div>
         <p className="text-sm md:text-base text-zinc-600 dark:text-zinc-400">
           A comprehensive overview of my teaching experience, including university courses, workshops, and mentoring activities.
