@@ -1,6 +1,6 @@
 import { getAllContent } from '@/lib/content';
 import Link from 'next/link'; 
-import { ContentData } from '@/types/content';
+import { ContentData, Publication } from '@/types/content';
 import { BackHomeButton } from '@/components/back-home-button';
 
 export default async function PublicationsPage() {
